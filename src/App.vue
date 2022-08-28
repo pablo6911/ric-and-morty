@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <div class="container">
     <div>
       <h1>Rick And Morty</h1>
@@ -7,6 +8,7 @@
       <ListCharacters />
     </div>
   </div>
+  <Foter />
 </template>
 
 <script>
@@ -14,19 +16,23 @@ import ListCharacters from '@/components/ListCharacters.vue'
 import FilterByStatus from '@/components/FilterByStatus.vue'
 
 import FilterByName from '@/components/FilterByName.vue'
+import Navbar from '@/components/Navbar.vue'
+import Foter from '@/components/Foter.vue'
 export default {
   name: 'App',
   components: {
+    Navbar,
     ListCharacters,
     FilterByStatus,
     FilterByName,
+    Foter,
   },
 }
 </script>
 
 <style lang="scss">
 :root {
-  --background-body: #24282f;
+  --background-body: #81aefa;
   --background-card: #3c3e44;
   --text-white: #ffffff;
   --text-gray: #c0c0c0;
@@ -41,6 +47,8 @@ body {
   background-color: var(--background-body);
   color: var(--text-white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 0.3em;
 }
 h1 {
   margin-bottom: 3rem;
